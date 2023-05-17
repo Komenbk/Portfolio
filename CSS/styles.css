@@ -295,6 +295,7 @@ h3{
 .videos-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
     align-items: center;
     gap: 2.5rem;
     margin-bottom: 2.5rem;
@@ -418,14 +419,28 @@ h3{
     }
 
     section {
-        padding: 10rem 3% 2rem;
+        padding: 10rem 15% 2rem;
     }
 
     .footer {
         padding: 2rem 3%;
     }
-}
 
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .videos-container{
+        grid-template-columns: 1fr;
+    }
+
+    .videos-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2.5rem;
+    }
+}
 @media (max-width: 768px) {
     #menu-icon {
         display: block;
@@ -487,16 +502,9 @@ h3{
         margin-bottom: 3rem;
     }
 
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
-@media (max-width: 617px) {
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 @media (max-width: 450px) {
     html {
