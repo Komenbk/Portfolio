@@ -382,6 +382,7 @@ h3{
 
 .card p{
     margin-top: 20px;
+    font-size: 2rem;
     font-weight: 600;
     letter-spacing: 2px;
     max-height: 0;
