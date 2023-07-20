@@ -364,7 +364,7 @@ h3{
     cursor: pointer;
 }
 
-.bx{
+.card .bx{
     font-size: 40px;
     background: var(--main-color);
     width: 60px;
