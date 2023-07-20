@@ -318,53 +318,81 @@ h3{
     transform: scale(1.1);
 } 
 
+.videos-container .shorts-box{
+    position: relative;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.shorts-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease;
+}
+
+.shorts-box:hover{
+    transform: scale(1.1);
+}
+
 
 .contacts h2 {
     margin-bottom: 3rem;
 }
 
-.contacts form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.contacts form .input-box {
+.contact-info {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.contacts form .input-box input,
-.contacts form textarea {
     width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.card{
     background: var(--second-bg-color);
-    border-radius: .8rem;
-    margin: .7rem 0;
-}
-
-
-.contacts form textarea {
-    resize: none;
-}
-
-.contacts form .btn {
-    margin-top: 2rem;
+    padding: 0 20px;
+    margin: 0 10px;
+    width: calc(33% - 20px);
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
     cursor: pointer;
 }
 
-.phone-number{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.bx{
+    font-size: 40px;
+    background: var(--main-color);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
 }
 
-.phone-number p{
-    font-size: 2rem;
+.card:hover .bx{
+    background: none;
+    color: var(--main-color);
+    transform: scale(1.6);
+}
+
+.card p{
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.card:hover p{
+    max-height: 40px;
+    opacity: 1;
 }
 
 .footer {
@@ -444,6 +472,15 @@ h3{
         justify-content: center;
         align-items: center;
         margin-bottom: 2.5rem;
+    }
+
+    .contact-info{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+        height: 300px;
+        margin: 10px 0;
     }
 }
 @media (max-width: 768px) {

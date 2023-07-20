@@ -62,7 +62,7 @@ ScrollReveal().reveal('.home-content p, .about-content', {
 
 // Typed JS //
 const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'SEO Expert', 'Video Editor'],
+    strings: ['Video Editor',],
     typeSpeed: 70,
     backSpeed: 70,
     backDelay: 1000,
