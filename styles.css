@@ -34,7 +34,6 @@ section{
 .heading,h2{
     font-size: 5rem;
 }
-
 /*Navigation bar design*/
 
 .header{
@@ -182,7 +181,7 @@ span{
 }
 
 .services-box p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin: 1rem 0 3rem;
 }
 
@@ -190,8 +189,10 @@ span{
     background: var(--second-bg-color);
 }
 
-.projects h2 {
+.projects h1 {
     margin-bottom: 4rem;
+    text-align: center;
+    text-decoration: underline;
 }
 
 h3{
@@ -199,88 +200,13 @@ h3{
     font-size: 2rem;
 }
 
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-    margin-bottom: 2.5rem;
-}
-
-.projects-container .projects-box {
-    position: relative;
-    border-radius: 1.5rem;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;
-    display: flex;
-}
-
-
-
-
-.projects-box img {
-    width: 100%;
-    transition: .5s ease;
-}
-
-.projects-box:hover img {
-    transform: scale(1.1);
-} 
-
-.projects-box .projects-layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    transform: translateY(100%);
-    transition: .5s ease;
-}
-
-.projects-box:hover .projects-layer {
-    transform: translateY(0%);
-}
-
-.projects-layer h4 {
-    font-size: 3rem;
-}
-
-.projects-layer p {
-    font-size: 1.6rem;
-    margin: .3rem 0 1rem;
-}
-
-.projects-layer a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    height: 5rem;background: var(--text-color);
-    border-radius: 50%;
-}
-
-.projects-layer a i {
-    font-size: 2rem;
-    color: var(--second-bg-color);
-}
-
 .videos-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
+    display: block;
     gap: 2.5rem;
     margin-bottom: 2.5rem;
 }
 
-.videos-container .videos-box{
+.videos-container .videos-box {
     position: relative;
     border-radius: 1.5rem;
     box-shadow: 0 0 1rem var(--bg-color);
@@ -288,35 +214,45 @@ h3{
     display: flex;
 }
 
-.videos-box {
-    width: 100%;
-    transition: .5s ease;
+.videos-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    min-height: 40vh;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
-.videos-box:hover{
-    transform: scale(1.1);
-} 
-
-.videos-container .shorts-box{
+.videos-box iframe{
     position: relative;
+    width: 50%;
+    margin: 2rem;
     border-radius: 1.5rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+
 }
 
-.shorts-box {
+iframe{
     width: 100%;
-    display: flex;
-    justify-content: center;
     transition: .5s ease;
 }
 
-.shorts-box:hover{
-    transform: scale(1.1);
+iframe:hover{
+    transform: scale(1.05);
 }
 
+.description{
+    width: 50%;
+    margin: 2rem;
+    font-family:'Poppins', sans-serif ;
+    font-size: medium;
+}
 
+h3{
+    font-weight: bold;
+}
 .contacts h2 {
     margin-bottom: 3rem;
 }
@@ -360,6 +296,9 @@ h3{
     transform: scale(1.6);
 }
 
+.card a {
+    color: #fff;
+}
 .card p{
     margin-top: 20px;
     font-size: 2rem;
