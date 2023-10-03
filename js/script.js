@@ -69,3 +69,20 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+// JavaScript to toggle "Read more" functionality on mobile devices only
+const isMobile = window.innerWidth <= 768; // Check if the screen width is less than or equal to 768px
+
+document.querySelectorAll('.read-more').forEach(function (readMoreLink) {
+    if (isMobile) {
+        readMoreLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            const moreContent = this.previousElementSibling;
+            moreContent.style.display = (moreContent.style.display === 'none' || moreContent.style.display === '') ? 'inline' : 'none';
+            this.innerText = (this.innerText === 'Read more') ? 'Read less' : 'Read more';
+        });
+        
+    } else {
+        readMoreLink.style.display = 'none'; // Hide "Read more" link on desktops
+    }
+});
