@@ -492,8 +492,10 @@ h3{
 
 .description .read-more {
     display: inline-block;
-    color: blue;
+    color: #fff;
     cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .description .read-more:hover {
