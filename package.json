@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "boxicons": "^2.1.4"
+    "boxicons": "^2.1.4",
+    "csso": "^5.0.5"
   }
 }
