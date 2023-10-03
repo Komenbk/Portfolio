@@ -8,6 +8,25 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
+// JavaScript to toggle "Read more" functionality on mobile devices only
+const isMobile = window.innerWidth <= 768; // Check if the screen width is less than or equal to 768px
+
+if (isMobile) {
+    document.querySelectorAll('.read-more').forEach(function (readMoreLink) {
+        readMoreLink.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default behavior (scrolling to the top)
+            event.stopPropagation(); // Prevent the event from propagating to parent elements
+            
+            const moreContent = this.previousElementSibling;
+            moreContent.style.display = (moreContent.style.display === 'none' || moreContent.style.display === '') ? 'inline' : 'none';
+            this.innerText = (this.innerText === 'Read more') ? 'Read less' : 'Read more';
+        });
+    });
+} else {
+    readMoreLink.style.display = 'none'; // Hide "Read more" link on desktops
+};
+
+
 // Scroll sections active link //
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -68,21 +87,4 @@ const typed = new Typed('.multiple-text', {
     backSpeed: 70,
     backDelay: 1000,
     loop: true
-});
-
-// JavaScript to toggle "Read more" functionality on mobile devices only
-const isMobile = window.innerWidth <= 768; // Check if the screen width is less than or equal to 768px
-
-document.querySelectorAll('.read-more').forEach(function (readMoreLink) {
-    if (isMobile) {
-        readMoreLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            const moreContent = this.previousElementSibling;
-            moreContent.style.display = (moreContent.style.display === 'none' || moreContent.style.display === '') ? 'inline' : 'none';
-            this.innerText = (this.innerText === 'Read more') ? 'Read less' : 'Read more';
-        });
-        
-    } else {
-        readMoreLink.style.display = 'none'; // Hide "Read more" link on desktops
-    }
 });
